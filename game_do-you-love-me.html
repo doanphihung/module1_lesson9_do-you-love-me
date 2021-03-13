@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me</title>
+
+</head>
+<body>
+<h1>Do you love me?</h1>
+<button type="button" id="yes">yes</button>
+<button type="button" id="no" style="position: absolute">no</button>
+
+<p id="result-yes" style="background-color: darkred;"></p>
+<h3></h3>
+<script>
+    var yes = document.getElementById('yes')
+    yes.addEventListener('click', function (){
+        // document.getElementById('result-yes').innerHTML = 'Yes'
+        alert('I love you so much!!');
+    });
+    document.getElementById('no').addEventListener('mouseover', randomNo);
+    function randomNo() {
+        var a = window.innerWidth * Math.random(); // Lấy chiều rộng và chiều cao của trình duyệt
+        var b = window.innerHeight * Math.random();
+        document.getElementById('no').style.left = a + 'px';
+        document.getElementById('no').style.top = b + 'px';
+
+        // document.getElementById('result-yes').innerHTML = 'ok'
+
+    }
+    // setInterval(randomNo,60);   //Sử dụng lại hàm randomNo đã xây dựng
+</script>
+
+</body>
+</html>
